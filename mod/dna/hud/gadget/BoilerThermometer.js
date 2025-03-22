@@ -1,3 +1,8 @@
+/*
+ * Shows boiler temperature
+ *
+ * Must be linked to the Train.boiler object!
+ */
 class BoilerThermometer extends dna.hud.Container {
 
     constructor(st) {
@@ -12,6 +17,7 @@ class BoilerThermometer extends dna.hud.Container {
         }, st) )
     }
 
+    // render the boiler pixel art
     draw() {
         const sh = this._hover? -2 : 0
 
@@ -19,6 +25,9 @@ class BoilerThermometer extends dna.hud.Container {
         rect(this.x + sh, this.y + sh, this.w, this.h)
     }
 
+    // blow up the boiler
+    //
+    // @param {object/projectile} e - hitter
     onClick(e) {
         log('thermo - ' + this.name)
     }

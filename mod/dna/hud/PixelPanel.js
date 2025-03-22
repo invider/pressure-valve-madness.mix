@@ -2,6 +2,7 @@ class PixelPanel extends dna.hud.Container {
 
     constructor(st) {
         super( augment({
+            _scaled: true,
             name: 'pixelPanel',
             x:     0,
             y:     0,
@@ -72,4 +73,17 @@ class PixelPanel extends dna.hud.Container {
     onMouseDown(e) {
     }
 
+    pick(x, y, ls, opt) {
+        let last
+        if (x >= this.x && x <= this.x + this.w
+                && y >= this.y && y <= this.y + this.h) {
+            ls.push(this)
+            last = this
+        }
+
+        let next = super.pick(x, y, ls, opt)
+
+        if (next) last = next
+        return last
+    }
 }
