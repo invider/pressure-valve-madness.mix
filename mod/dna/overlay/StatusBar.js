@@ -2,7 +2,7 @@ const df = {
     name:          'statusBar',
     message:       '',
     color:         hsl(.14, .4, .5),
-    background:    '#000000C0',
+    background:    '#00000080',
     margin:        8,
     hideWhenEmpty: false,
 }

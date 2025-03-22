@@ -14,11 +14,15 @@ function evo(dt) {
                 env.status = ''
             }
         } else {
+            /*
             if (env.debug) {
+                // show mouse coordinates in world
                 const wx = round(lab.port.lx(mouse.x)),
                       wy = round(lab.port.ly(mouse.y))
                 env.status = `${wx}:${wy}`
             }
+            */
+            env.status = ''
         }
 
     } else {
