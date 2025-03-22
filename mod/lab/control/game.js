@@ -5,4 +5,6 @@ function inProgress() {
 function startNew() {
     log('starting a new game...')
     env.gameStarted = true
+
+    lab.port.spawn( dna.dust.Train )
 }

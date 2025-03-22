@@ -20,7 +20,7 @@ const items = [
         hidden:  true,
         title:  'Resume Game',
         select: function() {
-            lab.control.state.transitTo('desert')
+            lab.control.state.transitTo('dust')
         },
     },
 ]
