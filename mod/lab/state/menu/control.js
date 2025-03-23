@@ -5,6 +5,7 @@ function toggleResumeGameOption() {
 }
 
 function onActivate() {
+    lab.background = env.style.color.menu.background
     this.toggleResumeGameOption()
 }
 

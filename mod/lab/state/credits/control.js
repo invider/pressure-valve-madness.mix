@@ -1,5 +1,6 @@
 function onActivate() {
     this.startedAt = env.time
+    lab.background = env.style.color.title.background
 
     // TODO clean up old credits roll
     // ...

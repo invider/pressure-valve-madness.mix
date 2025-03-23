@@ -1,125 +1,62 @@
 const style = {
 
-    // colors are based on the LowSpec CARNIVAL 32 palette by b236
-    // https://lospec.com/palette-list/carnival-32
+    // Steampunk color set
     //
-    // #4d2235 #71282a #975638 #d0763e #ebac4d #f2d08d #ddac88 #c68d80
-    // #af6d77 #c74446 #9f3847 #6e406d #a7a758 #718141 #496541 #37433b
-    // #2a1c31 #423157 #4d528a #556a97 #5c81a3 #7dadc8 #b0d6d9 #ece6df
-    // #cfccca #a6a6a6 #787878 #626262 #4a4a4a #363636 #618c70 #8b7463
-    //
+    // #9ead93,#391e0d,#725f47,#e4ae6c,
+    // #a8926d,#f1eec3,#b06021,#508182,
+    // #1b282f,#69472b,#f5e29d,#f6c156,
+    // #647166,#43362b,#c9955b,#29414b,
+    // #819079,#d38530,#eea446,#3a6066,
+    // #c5c8a9,#6d9d98,#60300e,#906235,
+    // #f7d578,#e4c08d,#874616,#ae7b47,
+    // #131112,#4e5149,#c4aa80,#8e7858
     color: {
-        title: hsl(.62, .7, .7),
+
+        title: {
+            text:       '#fba64c',
+            background: '#38353e',
+        },
 
         menu: {
-            title: '#ebac4d',
+            title:      '#fba64c',
+            background: '#38353e',
         },
 
         credits: {
             title: '#ebac4d',
             front: '#ebac4d',
             back:  '#4d2235',
+            background: '#38353e',
         },
 
-        space: '#2a1c31',
-
-        shakeCharge: '#d0763e',
-        seismicWave: '#ebac4d',
-
-        tribe: [
-            // neutral
-            {
-                base: '#787878',
-                high: '#cfccca',
-                low:  '#4a4a4a',
-            },
-            // green
-            {
-                base: '#718141',
-                high: '#a7a758',
-                low:  '#496541',
-            },
-            // orange
-            {
-                base: '#d0763e',
-                high: '#ebac4d',
-                low:  '#71282a',
-            },
-            // blue
-            {
-                base: '#5c81a3',
-                high: '#b0d6d9',
-                low:  '#556a97',
-            },
-            // red
-            {
-                base: '#af6d77',
-                high: '#c74446',
-                low:  '#9f3847',
-            },
-        ],
-
-        eyes: '#ece6df',
-
-        planet: [
-            {
-                base: '#496541',
-                high: '#a7a758',
-            }
-        ],
-
-        comet: {
-            base:   '#cfccca',
-            impact: '#a6a6a6',
+        dust: {
+            background: '#9e8676',
         },
-
-        mineralDeposit: {
-            base:   '#ebac4d',
-            pickUp: '#ebac4d'
-        },
-
-        crack: {
-            base: '#9f3847',
-            high: '#c74446',
-            low:  '#4d2235',
-        },
-
-        plume: '#cfccca',
-
-        warp: {
-            out:  '#ebac4d',
-            back: '#7dadc8',
-        },
-
-        star: [
-            '#ece6df',
-            '#b0d6d9',
-            '#7dadc8',
-            '#ebac4d',
-            '#d0763e',
-            '#c74446',
-        ],
     },
 
     font: {
         main: {
-            family: 'moon',
+            family: 'JackOfGears',
             size:   24,
         },
         title: {
-            family: 'moon',
-            size:   64,
+            family: 'FabulousSteampunk',
+            size:   80,
+        },
+        screenTitle: {
+            family: 'FabulousSteampunk',
+            size:   48,
         },
         menu: {
-            family: 'moon',
+            family: 'JackOfGears',
             size:   32,
         },
         menuHigh: {
-            family: 'moon',
+            family: 'JackOfGears',
             size:   36,
         },
         credits: {
-            family: 'moon',
+            family: 'JackOfGears',
             size:   32,
         },
 

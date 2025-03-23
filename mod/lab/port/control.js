@@ -1,3 +1,3 @@
 function onActivate() {
-    lab.background = '#404040'
+    lab.background = env.style.color.dust.background
 }

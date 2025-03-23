@@ -52,6 +52,6 @@ const options = [
         },
     },
 ]
-options.title = 'Options'
+options.title = 'OPTIONS'
 options.preservePos = true
 
