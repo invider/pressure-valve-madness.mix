@@ -18,7 +18,8 @@ class Boiler {
             pressureCoef: 1,
             maxPressure: 10,
             letOffPerSecond: 1,
-            valveOpened: false
+            valveOpened: false,
+            exploded: false,
         }, st) 
     }
 
@@ -60,8 +61,14 @@ class Boiler {
     blowUp(){
         // called once the boiler reached the maximum pressure and explodes
         console.log('BOILER EXPLODED')
+        lib.sfx('explosion')
+        this.exploded = true;
     }
     evo(dt) {
+        if (this.exploded){
+            return;
+        }
+        
         this.drainWater(dt);
 
         const energy = this.drainEnergy(dt);
@@ -74,7 +81,7 @@ class Boiler {
         }
 
         this.boilWater(dt);
-        if (this.pressure > this.maxPressure) {
+        if (this.pressure > this.maxPressure && !this.exploded) {
             this.blowUp()
         }
 
