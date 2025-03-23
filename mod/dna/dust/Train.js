@@ -2,6 +2,7 @@ class Train extends sys.LabFrame {
 
     constructor(st) {
         super( augment({
+            Z:    101,
             name: 'train',
             x:    0,
             y:    0,

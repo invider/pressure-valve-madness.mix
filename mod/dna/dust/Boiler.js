@@ -61,9 +61,25 @@ class Boiler {
     blowUp(){
         // called once the boiler reached the maximum pressure and explodes
         console.log('BOILER EXPLODED')
-        lib.sfx('explosion')
         this.exploded = true;
         this.pressure = 0;
+
+        let delay = 0
+        const boiler = this,
+              spreadX = 100,
+              spreadY = 50,
+              sx =  50,
+              sy = -25
+        defer(() => lib.vfx.explosionAt(boiler.x + sx, boiler.y + sy, 3 * rnd()), delay)
+        for (let i = 0; i < 3; i++) {
+            delay += .4
+            defer(() => lib.vfx. explosionAt(
+                    boiler.x + sx + spreadX*rnd() - .5*spreadX,
+                    boiler.y + sy + spreadY*rnd() - .5*spreadY,
+                    .5 + 3 * rnd()),
+                delay
+            )
+        }
     }
     evo(dt) {
         if (this.exploded){

@@ -20,6 +20,10 @@ module.exports = {
         res: '752753__sprinklecipher__toy-electronic-typewriter-return-lever',
         vol: .8,
     },
+    'explosion': {
+        res: 'explosion',
+        vol: 1,
+    },
 
     default: {
         vol: .7

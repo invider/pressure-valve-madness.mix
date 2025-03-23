@@ -31,6 +31,7 @@ const style = {
 
         dust: {
             background: '#9e8676',
+            particle:   '#29414b', 
         },
 
         hud: {
