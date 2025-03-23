@@ -39,11 +39,11 @@ class Boiler {
     }
 
     drainEnergy(dt) {
-        const energy = lab.port.burner.energy * this.energyPerSecond * dt;
-        lab.port.burner.energy -= energy;
-        // if (lab.port.burner.energy < 0) {
-        //     lab.port.burner.energy = 0;
-        // }
+        const energy = this.__.burner.energy * this.energyPerSecond * dt;
+        this.__.burner.energy -= energy;
+        if (this.__.burner.energy < 0) {
+            this.__.burner.energy = 0;
+        }
         return energy;
     }
 
