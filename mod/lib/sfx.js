@@ -19,10 +19,10 @@ module.exports = function(name, vol, pan) {
 
     if (config.vol) vol *= config.vol
     if (!clip) {
-        clip = container['default']
-        log.warn(`missing resource for [${name}], using default tone`)
+        log.warn(`missing the sound for [${name}] in /res/sfx/`)
+        lib.sfx('missing')
+        return
     }
-
     //log(`plaing [${name}]`)
     sfx(clip, vol, pan)
 }
