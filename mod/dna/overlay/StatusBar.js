@@ -1,7 +1,7 @@
 const df = {
     name:          'statusBar',
     message:       '',
-    color:         hsl(.14, .4, .5),
+    color:         '#FFFFFFFF',
     background:    '#00000080',
     margin:        8,
     hideWhenEmpty: false,
@@ -17,7 +17,7 @@ class StatusBar {
         const message = env.status || this.message
         if (this.hideWhenEmpty && !message) return
 
-        const f = env.style.font.main
+        const f = env.style.font.status
         const h = f.size + 2*this.margin
         fill(this.background)
         rect(0, ctx.height - h, ctx.width, h)

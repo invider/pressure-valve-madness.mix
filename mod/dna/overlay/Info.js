@@ -1,20 +1,18 @@
 /*
  * Information node.
  */
-
-const df = {
-    name:       'info',
-    color:      '#ffffff',
-    background: '#00000080',
-    margin:     8,
-    rx:         0,
-    ry:         0,
-}
-
 class Info {
 
     constructor(st) {
-        extend(this, df, st)
+        extend(this, {
+            name:       'info',
+            color:      '#ffffff',
+            background: '#00000080',
+            margin:     8,
+            rx:         0,
+            ry:         0,
+            debug:      false,
+        }, st)
         this.keys = {}
         this.icons = {}
     }
@@ -43,6 +41,7 @@ class Info {
     }
 
     draw() {
+        if (this.debug && !env.debug) return
         const keys = Object.keys(this.keys)
         const N = keys.length
         if (N === 0) return

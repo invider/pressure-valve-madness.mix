@@ -78,7 +78,11 @@ const style = {
 
         info: {
             family: 'moon',
-            size: 16,
+            size: 20,
+        },
+        status: {
+            family: 'moon',
+            size: 24,
         },
         debug: {
             family: 'moon',

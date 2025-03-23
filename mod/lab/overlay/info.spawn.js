@@ -1,3 +1,4 @@
 const info = {
-    DNA: 'overlay/Info',
+    DNA:   'overlay/Info',
+    debug:  true,
 }
