@@ -3,15 +3,18 @@ order: 1
 tags: gamejam, game
 ------------------------------------------
 
-## How to Run
-
-## How to Debug
-
-## Test Flags
-
-Some flags available:
+== Available Flags
 
 ```
+-d - debug
 --new - jump directly into a new game
+--debugCoords - enable coordinate tracing on the status bar
+```
+
+== Available Console Commands
+
+```
+debug - switch debug mode on/off
+flag <name> - switch a flag in env or list set flags when no name provided
 ```
 
