@@ -8,7 +8,7 @@ class Breaks {
             h:    0,
             temp: 0,
             breakingPowerPerSecond: 10,
-            heatingPerSecond: 10,
+            heatingPerSecond: 200,
             coolingPerSecond: 1,
             minTemp: 10,
             maxTemp: 100,
@@ -33,8 +33,12 @@ class Breaks {
 
     evo(dt) {
         if (this.breaking && !this.melted){
-            this.temp += this.heatingPerSecond * dt;
+            const oldSpeed = this.__.engine.speed;
             this.__.engine.setSpeed(this.__.engine.speed - this.breakingPowerPerSecond * dt);
+            const speedDiff = oldSpeed - this.__.engine.speed;
+            if (speedDiff > 0){
+                this.temp += speedDiff * this.heatingPerSecond * dt;
+            }
         }
 
         if (this.temp > this.maxTemp){
