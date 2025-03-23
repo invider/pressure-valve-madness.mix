@@ -11,4 +11,5 @@ function startNew() {
     lab.port.spawn( dna.dust.Burner)
     lab.port.spawn( dna.dust.WaterTank)
     lab.port.spawn( dna.dust.Engine)
+    lab.port.spawn( dna.dust.Breaks)
 }

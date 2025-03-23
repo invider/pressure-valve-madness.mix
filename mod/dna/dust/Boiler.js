@@ -46,15 +46,16 @@ class Boiler {
         return energy;
     }
     evo(dt) {
-        if (this.temp < this.minTemp) {
-            this.temp = this.minTemp;
-        }
         this.drainWater(dt);
 
         const energy = this.drainEnergy(dt);
         const delta = energy / this.waterAmount;
         this.temp += delta;
         this.temp -= this.temp * dt * this.efficiency;
+
+        if (this.temp < this.minTemp) {
+            this.temp = this.minTemp;
+        }
 
         this.boilWater(dt);
         lab.overlay.info.set('boilerEnergy', lib.math.round2(energy))
