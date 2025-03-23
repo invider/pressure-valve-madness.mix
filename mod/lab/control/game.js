@@ -13,4 +13,5 @@ function startNew() {
     train.spawn( dna.dust.WaterTank)
     train.spawn( dna.dust.Engine)
     train.spawn( dna.dust.Breaks)
+    train.spawn( dna.dust.FuelTank)
 }

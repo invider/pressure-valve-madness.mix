@@ -12,12 +12,9 @@ class RefuelLever extends DustyButton {
 
     onClick() {
         log('refueling...')
-        // TODO refueling
-        lab.port.train.burner.add('coal', {
-            amount: 5,
-            capacity: 100000,
-            cps: 0.03            
-        })
+
+        const tank = lab.port.train.fuelTank;
+        lab.port.train.burner.add(tank.selected, tank.takeFuel(5));
     }
 
 }
