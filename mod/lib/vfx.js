@@ -15,9 +15,9 @@ function debrisDestruction(source, x, y) {
         lifespan: 0.1,
         force:  300,
         radius: 0,
-        size: 2, vsize: 2,
+        size: 3, vsize: 2,
         speed: 20, vspeed: 20,
-        angle: 0, spread: TAU,
+        angle: PI, spread: PI,
         minLifespan: .2, vLifespan: .2,
 
         onKill: function() {

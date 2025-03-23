@@ -31,7 +31,7 @@ const style = {
 
         dust: {
             background: '#9e8676',
-            particle:   '#29414b', 
+            particle:   '#64716670', 
         },
 
         hud: {
@@ -54,6 +54,10 @@ const style = {
         title: {
             family: 'FabulousSteampunk',
             size:   80,
+        },
+        subTitle: {
+            family: 'JackOfGears',
+            size:   32,
         },
         screenTitle: {
             family: 'FabulousSteampunk',
@@ -82,9 +86,6 @@ const style = {
         },
     },
 
-    credits: {
-        keep: 15,
-    }
 }
 
 function classifyFonts() {

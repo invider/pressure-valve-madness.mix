@@ -30,7 +30,7 @@ function next() {
 }
 
 function evo(dt) {
-    if (this.startedAt && env.time > this.startedAt + env.style.credits.keep) {
+    if (this.startedAt && env.time > this.startedAt + env.tune.credits.hold) {
         this.next()
     }
 }
