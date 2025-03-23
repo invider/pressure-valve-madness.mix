@@ -123,6 +123,10 @@ const style = {
             size:   32,
         },
 
+        info: {
+            family: 'moon',
+            size: 16,
+        },
         debug: {
             family: 'moon',
             size: 24,

@@ -8,9 +8,6 @@ class Train extends sys.LabFrame {
             w:    200,
             h:    50,
         }, st) )
-
-        // TODO construct the train
-        // this.spawn( dna.dust.Boiler )
     }
 
     draw() {
