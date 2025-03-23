@@ -47,5 +47,8 @@ class DustyButton extends dna.hud.Container {
 
     onMouseUp(e) {
         this._down = false
+        if (this.sfxOver) {
+            lib.sfx(this.sfxOver)
+        }
     }
 }

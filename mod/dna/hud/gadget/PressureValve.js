@@ -4,8 +4,10 @@ class PressureValve extends DustyButton {
 
     constructor(st) {
         super( augment({
-            name: 'pressureValve',
-            label: 'Valve',
+            name:    'pressureValve',
+            label:   'Valve',
+            sfx:     'clank',
+            sfxOver: 'click',
         }, st) )
     }
 

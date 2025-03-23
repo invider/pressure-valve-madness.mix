@@ -4,8 +4,10 @@ class BreakLever extends DustyButton {
 
     constructor(st) {
         super( augment({
-            name: 'breakLever',
-            label: 'Break',
+            name:    'breakLever',
+            label:   'Break',
+            sfx:     'clank',
+            sfxOver: 'click',
         }, st) )
     }
 
