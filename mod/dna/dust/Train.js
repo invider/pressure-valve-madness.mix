@@ -7,7 +7,10 @@ class Train extends sys.LabFrame {
             y:    0,
             w:    200,
             h:    50,
+            distance: 0,
+            soundPerDistance: 10
         }, st) )
+        this._soundDistance = 0
     }
 
     init(){
@@ -36,6 +39,13 @@ class Train extends sys.LabFrame {
     evo(dt) {
         super.evo(dt)
         this.y = sin(12*env.time) * 5
+        this.distance += this.engine.speed * dt
+        this._soundDistance += this.engine.speed * dt
+
+        if (this._soundDistance > this.soundPerDistance) {
+            lib.sfx('steam-cycle')
+            this._soundDistance -= this.soundPerDistance;
+        }
     }
 
 }

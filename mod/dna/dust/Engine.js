@@ -39,7 +39,6 @@ class Engine {
             this.speed += this.consumed * this.speedPressureKoef;
             this.consumed -= this.ptp;
             // res.mp3.steam_single.play();
-            lib.sfx('steam-cycle')
         }
 
         if (this.speed > 0) {
