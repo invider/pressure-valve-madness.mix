@@ -32,7 +32,7 @@ class Burner {
     evo(dt) {
         const toDelete = [];
         for (const f in this.fuel) {
-            lab.overlay.info.set('f:' + f, this.fuel[f].amount)
+            lab.overlay.info.set('f:' + f, lib.math.round2(this.fuel[f].amount))
             if (this._burnFuel(dt, this.fuel[f])){
                 toDelete.push(f);
             }
@@ -41,6 +41,6 @@ class Burner {
         for (const f of toDelete) {
             delete this.fuel[f];
         }
-        lab.overlay.info.set('energy', this.energy)
+        lab.overlay.info.set('energy', lib.math.round2(this.energy))
     }
 }

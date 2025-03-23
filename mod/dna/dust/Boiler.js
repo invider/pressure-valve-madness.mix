@@ -40,9 +40,9 @@ class Boiler {
     drainEnergy(dt) {
         const energy = lab.port.burner.energy * this.energyPerSecond * dt;
         lab.port.burner.energy -= energy;
-        if (lab.port.burner.energy <= 1) {
-            lab.port.burner.energy = 0;
-        }
+        // if (lab.port.burner.energy < 0) {
+        //     lab.port.burner.energy = 0;
+        // }
         return energy;
     }
     evo(dt) {
@@ -57,9 +57,9 @@ class Boiler {
         this.temp -= this.temp * dt * this.efficiency;
 
         this.boilWater(dt);
-        lab.overlay.info.set('boilerEnergy', energy)
-        lab.overlay.info.set('temp', this.temp)
-        lab.overlay.info.set('pressure', this.pressure)
-        lab.overlay.info.set('boilerWater', this.waterAmount)
+        lab.overlay.info.set('boilerEnergy', lib.math.round2(energy))
+        lab.overlay.info.set('temp', lib.math.round2(this.temp))
+        lab.overlay.info.set('pressure', lib.math.round2(this.pressure))
+        lab.overlay.info.set('boilerWater', lib.math.round2(this.waterAmount))
     }
 }
