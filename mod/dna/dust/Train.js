@@ -1,13 +1,16 @@
-class Train {
+class Train extends sys.LabFrame {
 
     constructor(st) {
-        augment(this, {
+        super( augment({
             name: 'train',
             x:    0,
             y:    0,
             w:    200,
             h:    50,
-        }, st)
+        }, st) )
+
+        // TODO construct the train
+        // this.spawn( dna.dust.Boiler )
     }
 
     draw() {
@@ -25,9 +28,12 @@ class Train {
         rect( -.5 * w, -.5 * h, w, h)
 
         restore()
+
+        super.draw()
     }
 
     evo(dt) {
+        super.evo(dt)
         this.y = sin(12*env.time) * 5
     }
 
