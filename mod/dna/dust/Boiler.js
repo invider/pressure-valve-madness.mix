@@ -63,12 +63,13 @@ class Boiler {
         console.log('BOILER EXPLODED')
         lib.sfx('explosion')
         this.exploded = true;
+        this.pressure = 0;
     }
     evo(dt) {
         if (this.exploded){
             return;
         }
-        
+
         this.drainWater(dt);
 
         const energy = this.drainEnergy(dt);
