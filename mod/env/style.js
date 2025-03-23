@@ -90,6 +90,15 @@ const style = {
         },
     },
 
+    dimension: {
+        camera: {
+            targetW:   640,
+        },
+        controlPanel: {
+            vw:    640,
+            vh:    60,
+        }
+    },
 }
 
 function classifyFonts() {

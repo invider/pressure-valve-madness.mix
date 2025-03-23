@@ -2,6 +2,8 @@ function hud() {
     const controlPanel = lab.hud.spawn( dna.hud.PixelPanel, {
         name: 'controlPanel',
         clip: false,
+        vw:    env.style.dimension.controlPanel.vw,
+        vh:    env.style.dimension.controlPanel.vh,
     })
 
     controlPanel.spawn( dna.hud.gadget.BoilerThermometer, {

@@ -1,6 +1,6 @@
 const _port = {
     Z:     11,
-    DNA:  'SlideCamera',
+    DNA:  'DesertCamera',
     name: 'port',
     zoomOnPlusMinus: true, 
 
