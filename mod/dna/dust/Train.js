@@ -38,7 +38,8 @@ class Train extends sys.LabFrame {
 
     evo(dt) {
         super.evo(dt)
-        this.y = sin(12*env.time) * 5
+        // this.y = sin(12*env.time) * 5
+        this.y = sin(0.2 * this.distance) * 5
         this.distance += this.engine.speed * dt
         this._soundDistance += this.engine.speed * dt
 
