@@ -10,12 +10,12 @@ class Engine {
             w:    0,
             h:    0,
             // max pressure per second
-            maxPps: 1000,
+            maxPps: 1.2,
             // pressure to push
             ptp: 1,
             // current speed
             speed: 0,
-            speedPressureKoef: 1,
+            speedPressureKoef: 5,
             // 
             friction: 0.05
         }, st) 

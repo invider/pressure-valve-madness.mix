@@ -13,9 +13,10 @@ class Boiler {
             energyPerSecond: 100,
             minTemp: 10,
             boilingPoint: 115.4,
-            efficiency: 0.2,
+            efficiency: 0.9,
             waterBoilingCoef: 1,
-            pressureCoef: 1
+            pressureCoef: 1,
+            maxPressure: 10
         }, st) 
     }
 
@@ -45,6 +46,11 @@ class Boiler {
         // }
         return energy;
     }
+
+    blowUp(){
+        // called once the boiler reached the maximum pressure and explodes
+        console.log('BOILER EXPLODED')
+    }
     evo(dt) {
         this.drainWater(dt);
 
@@ -58,6 +64,9 @@ class Boiler {
         }
 
         this.boilWater(dt);
+        if (this.pressure > this.maxPressure) {
+            this.blowUp()
+        }
         lab.overlay.info.set('boilerEnergy', lib.math.round2(energy))
         lab.overlay.info.set('temp', lib.math.round2(this.temp))
         lab.overlay.info.set('pressure', lib.math.round2(this.pressure))
