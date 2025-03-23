@@ -16,7 +16,9 @@ class Boiler {
             efficiency: 0.9,
             waterBoilingCoef: 1,
             pressureCoef: 1,
-            maxPressure: 10
+            maxPressure: 10,
+            letOffPerSecond: 1,
+            valveOpened: false
         }, st) 
     }
 
@@ -47,6 +49,14 @@ class Boiler {
         return energy;
     }
 
+    openLetOffValve(){
+        this.valveOpened = true;
+    }
+
+    closeLetOffValve(){
+        this.valveOpened = false;
+    }
+
     blowUp(){
         // called once the boiler reached the maximum pressure and explodes
         console.log('BOILER EXPLODED')
@@ -67,6 +77,12 @@ class Boiler {
         if (this.pressure > this.maxPressure) {
             this.blowUp()
         }
+
+        if (this.valveOpened){
+            this.pressure -= this.letOffPerSecond * dt;
+            // TODO: add sound of the running out steam
+        }
+
         lab.overlay.info.set('boilerEnergy', lib.math.round2(energy))
         lab.overlay.info.set('temp', lib.math.round2(this.temp))
         lab.overlay.info.set('pressure', lib.math.round2(this.pressure))
