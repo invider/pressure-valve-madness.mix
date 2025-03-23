@@ -16,7 +16,7 @@ class RefuelLever extends DustyButton {
         lab.port.train.burner.add('coal', {
             amount: 5,
             capacity: 100000,
-            cps: 0.3            
+            cps: 0.03            
         })
     }
 

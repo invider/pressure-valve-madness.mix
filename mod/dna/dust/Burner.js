@@ -8,13 +8,13 @@ class Burner {
             h:    0,
             efficiency: 0.2,
             fuel:     {
-                "coal": {
-                    amount: 10,
-                    // energy capacity
-                    capacity: 100000,
-                    // how much fuel of this type is burned per second
-                    cps: 0.03
-                }
+                // "coal": {
+                //     amount: 10,
+                //     // energy capacity
+                //     capacity: 100000,
+                //     // how much fuel of this type is burned per second
+                //     cps: 0.03
+                // }
             }
         }, st) 
         this.energy = 0;
