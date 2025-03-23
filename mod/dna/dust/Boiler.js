@@ -12,12 +12,14 @@ class Boiler {
             energyPerSecond: 1,
             efficiency: 0.2,
         }, st) 
-        this._heatIntegral = 0;
     }
 
     evo(dt) {
         const energy = lab.port.burner.energy * this.energyPerSecond * dt;
         lab.port.burner.energy -= energy;
+        if (lab.port.burner.energy <= 1) {
+            lab.port.burner.energy = 0;
+        }
         const effectiveEnergy = energy * this.efficiency;
         const delta = effectiveEnergy / (this.waterAmount * this.energyPerSecond);
         this.temp += delta;
