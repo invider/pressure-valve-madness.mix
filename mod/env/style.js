@@ -32,12 +32,23 @@ const style = {
         dust: {
             background: '#9e8676',
         },
+
+        hud: {
+            button: '#c9955b',
+            shadow: '#4e5149',
+            face:   '#391e0d',
+        },
+
     },
 
     font: {
         main: {
             family: 'JackOfGears',
-            size:   24,
+            size:    24,
+        },
+        hud: {
+            family: 'JackOfGears',
+            size:    16,
         },
         title: {
             family: 'FabulousSteampunk',

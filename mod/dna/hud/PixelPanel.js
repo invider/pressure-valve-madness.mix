@@ -70,9 +70,6 @@ class PixelPanel extends dna.hud.Container {
         restore()
     }
 
-    onMouseDown(e) {
-    }
-
     pick(x, y, ls, opt) {
         let last
         if (x >= this.x && x <= this.x + this.w
