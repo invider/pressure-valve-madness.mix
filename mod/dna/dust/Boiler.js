@@ -8,7 +8,7 @@ class Boiler {
             h:    0,
             temp:     0,
             pressure: 0,
-            waterAmount: 100,
+            waterAmount: 0,
             maxWaterAmount: 100,
             energyPerSecond: 100,
             minTemp: 10,

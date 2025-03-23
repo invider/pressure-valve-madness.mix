@@ -12,7 +12,8 @@ class FuelSwitch extends DustyButton {
 
     onClick() {
         log('switching fuel...')
-        // TODO switch fuel type
+        const tank = lab.port.train.fuelTank;
+        tank.selectNext();
     }
 
 }

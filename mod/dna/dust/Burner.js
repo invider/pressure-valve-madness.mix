@@ -8,13 +8,13 @@ class Burner {
             h:    0,
             efficiency: 0.2,
             fuel:     {
-                "coal": {
-                    amount: 10,
-                    // energy capacity
-                    capacity: 100000,
-                    // how much fuel of this type is burned per second
-                    cps: 0.3
-                }
+                // "coal": {
+                //     amount: 10,
+                //     // energy capacity
+                //     capacity: 100000,
+                //     // how much fuel of this type is burned per second
+                //     cps: 0.03
+                // }
             }
         }, st) 
         this.energy = 0;
@@ -29,7 +29,7 @@ class Burner {
     }
 
     _burnFuel(dt, fuel) {
-        const toBurn = fuel.cps * dt;
+        const toBurn = fuel.cps * fuel.amount * dt;
         const currentTickAmount = Math.min(fuel.amount, toBurn);
         this.energy += currentTickAmount * fuel.capacity;
         fuel.amount -= currentTickAmount;
