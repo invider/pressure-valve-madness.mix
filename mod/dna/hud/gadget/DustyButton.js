@@ -15,6 +15,7 @@ class DustyButton extends dna.hud.Container {
             face:       env.style.color.hud.face,
             background: env.style.color.hud.button,
             shadow:     env.style.color.hud.shadow,
+            sfx: 'clank',
         }, st) )
     }
 
@@ -39,6 +40,9 @@ class DustyButton extends dna.hud.Container {
 
     onMouseDown(e) {
         this._down = true
+        if (this.sfx) {
+            lib.sfx(this.sfx)
+        }
     }
 
     onMouseUp(e) {

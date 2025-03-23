@@ -10,11 +10,13 @@ class BreakLever extends DustyButton {
     }
 
     onMouseDown() {
+        super.onMouseDown()
         log('break!!!')
         lab.port.train.breaks.hit();
     }
 
     onMouseUp() {
+        super.onMouseUp()
         log('break release!!!')
         lab.port.train.breaks.release();
     }

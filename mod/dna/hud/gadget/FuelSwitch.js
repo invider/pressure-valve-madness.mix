@@ -6,6 +6,7 @@ class FuelSwitch extends DustyButton {
         super( augment({
             name: 'fuelSwitch',
             label: 'Switch',
+            sfx:   'lever-close',
         }, st) )
     }
 

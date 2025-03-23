@@ -6,6 +6,7 @@ class RefuelLever extends DustyButton {
         super( augment({
             name: 'refuelLever',
             label: 'Refuel',
+            sfx:   'lever',
         }, st) )
     }
 
