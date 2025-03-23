@@ -8,7 +8,7 @@ class Train extends sys.LabFrame {
             w:    200,
             h:    50,
             distance: 0,
-            soundPerDistance: 10
+            soundPerDistance: 15
         }, st) )
         this._soundDistance = 0
     }
@@ -46,6 +46,7 @@ class Train extends sys.LabFrame {
             lib.sfx('steam-cycle')
             this._soundDistance -= this.soundPerDistance;
         }
+        lab.overlay.info.set('distance', lib.math.round2(this.distance))
     }
 
 }
