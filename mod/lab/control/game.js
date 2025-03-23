@@ -6,10 +6,11 @@ function startNew() {
     log('starting a new game...')
     env.gameStarted = true
 
-    lab.port.spawn( dna.dust.Train)
-    lab.port.spawn( dna.dust.Boiler)
-    lab.port.spawn( dna.dust.Burner)
-    lab.port.spawn( dna.dust.WaterTank)
-    lab.port.spawn( dna.dust.Engine)
-    lab.port.spawn( dna.dust.Breaks)
+
+    const train = lab.port.spawn( dna.dust.Train)
+    train.spawn( dna.dust.Boiler)
+    train.spawn( dna.dust.Burner)
+    train.spawn( dna.dust.WaterTank)
+    train.spawn( dna.dust.Engine)
+    train.spawn( dna.dust.Breaks)
 }

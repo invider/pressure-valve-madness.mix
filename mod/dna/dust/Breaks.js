@@ -19,11 +19,11 @@ class Breaks {
 
 
     hit(){
-        breaking = true;
+        this.breaking = true;
     }
 
     release(){
-        breaking = false;
+        this.breaking = false;
     }
 
     // called if the breaking system was melted
@@ -34,6 +34,7 @@ class Breaks {
     evo(dt) {
         if (this.breaking && !this.melted){
             this.temp += this.heatingPerSecond * dt;
+            this.__.engine.setSpeed(this.__.engine.speed - this.breakingPowerPerSecond * dt);
         }
 
         if (this.temp > this.maxTemp){

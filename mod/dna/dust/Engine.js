@@ -23,6 +23,13 @@ class Engine {
 
     }
 
+    setSpeed(speed) {
+        this.speed = speed;
+        if (this.speed < 0) {
+            this.speed = 0;
+        }
+    }
+
     evo(dt) {
         //res.mp3.steam_single.play();
         const pressure = Math.min(this.__.boiler.pressure, this.maxPps * dt);

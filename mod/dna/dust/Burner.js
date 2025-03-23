@@ -20,6 +20,13 @@ class Burner {
         this.energy = 0;
     }
 
+    add(type, st) {
+        if (this.fuel[type] !== undefined) {
+            this.fuel[type].amount += st.amount;
+        } else {
+            this.fuel[type] = st;
+        }
+    }
 
     _burnFuel(dt, fuel) {
         const toBurn = fuel.cps * dt;
