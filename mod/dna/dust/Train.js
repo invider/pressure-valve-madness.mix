@@ -10,6 +10,10 @@ class Train extends sys.LabFrame {
         }, st) )
     }
 
+    init(){
+        
+    }
+
     draw() {
         const { x, y, w, h } = this
         save()

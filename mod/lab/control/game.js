@@ -9,4 +9,5 @@ function startNew() {
     lab.port.spawn( dna.dust.Train)
     lab.port.spawn( dna.dust.Boiler)
     lab.port.spawn( dna.dust.Burner)
+    lab.port.spawn( dna.dust.WaterTank)
 }

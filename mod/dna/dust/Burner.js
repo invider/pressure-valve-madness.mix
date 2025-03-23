@@ -11,7 +11,7 @@ class Burner {
                 "coal": {
                     amount: 10,
                     // energy capacity
-                    capacity: 10000,
+                    capacity: 100000,
                     // how much fuel of this type is burned per second
                     cps: 0.3
                 }
