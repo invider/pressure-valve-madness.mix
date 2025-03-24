@@ -50,13 +50,13 @@ function hud() {
     controlPanel.spawn( dna.hud.gadget.Manometer, {
         x:    300,
         y:    5,
-        w:    H + pad,
+        w:    2 * H + pad,
         h:    H + pad,
-        R:    hH + .5*pad,
+        R:    H + .5*pad,
     })
 
     controlPanel.spawn( dna.hud.gadget.PressureValve, {
-        x: 370,
+        x: 420,
         y: 10,
         w: 45,
         h: 50,

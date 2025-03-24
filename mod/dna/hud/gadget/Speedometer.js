@@ -5,6 +5,7 @@ class Speedometer extends Gauge {
     constructor(st) {
         super( augment({
             name:  'speedometer',
+            clip:   false,
             min:    0,
             max:    120,
         }, st) )

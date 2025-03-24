@@ -7,6 +7,7 @@ class Manometer extends Gauge {
             name:  'manometer',
             min:    0,
             max:    12,
+            clip:   true,
 
             startAngle: 1.1 * PI,
             angleRange: 0.8 * PI,
@@ -19,6 +20,5 @@ class Manometer extends Gauge {
         }
         return this.min
     }
-
 }
 
