@@ -99,7 +99,7 @@ const style = {
             vh:    70,
             pad:   10,
         },
-        shopPanel: {
+        shopingPanel: {
             vw:    340,
             vh:    70,
             pad:   10,

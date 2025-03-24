@@ -29,6 +29,10 @@ module.exports = {
         res: '170847__eliasheuninck__steam-train-horn_03',
         vol: .8,
     },
+    'bell': {
+        res: '543825__profispiesser__fxsasc-berlin-tram-train-ring-bell-alexanderplatz',
+        vol: 1,
+    },
 
     'explosion': {
         res: 'explosion',

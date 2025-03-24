@@ -92,14 +92,13 @@ function controlPanel() {
 
 function shopPanel() {
 
-    const pad = env.style.dimension.shopPanel.pad,
-          vw  = env.style.dimension.shopPanel.vw,
-          vh  = env.style.dimension.shopPanel.vh,
+    const pad = env.style.dimension.shopingPanel.pad,
+          vw  = env.style.dimension.shopingPanel.vw,
+          vh  = env.style.dimension.shopingPanel.vh,
           H   = vh - 2*pad,
           hH  = .5 * H
 
-    const shopPanel = lab.hud.spawn( dna.hud.PixelPanel, {
-        name: 'shopPanel',
+    const shoppingPanel = lab.hud.spawn( dna.hud.ShoppingPanel, {
         clip: false,
         vw,
         vh,
@@ -117,29 +116,37 @@ function shopPanel() {
         },
     })
 
-    shopPanel.spawn( dna.hud.gadget.DustyButton, {
+    shoppingPanel.spawn( dna.hud.gadget.DustyButton, {
         name: 'buy1',
         x: 10,
         y: 10,
         w: 2*H,
         h: H,
+        onClick: function() {
+            this.__.buy(1)
+        },
     })
-    shopPanel.spawn( dna.hud.gadget.DustyButton, {
+    shoppingPanel.spawn( dna.hud.gadget.DustyButton, {
         name: 'buy2',
         x: 120,
         y: 10,
         w: 2*H,
         h: H,
+        onClick: function() {
+            this.__.buy(2)
+        },
     })
-    shopPanel.spawn( dna.hud.gadget.DustyButton, {
+    shoppingPanel.spawn( dna.hud.gadget.DustyButton, {
         name: 'buy3',
         x: 230,
         y: 10,
         w: 2*H,
         h: H,
+        onClick: function() {
+            this.__.buy(3)
+        },
     })
-
-    // shopPanel.hide()
+    shoppingPanel.hide()
 }
 
 function hud() {

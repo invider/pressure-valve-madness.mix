@@ -115,7 +115,7 @@ class Train extends sys.LabFrame {
         }
         lab.overlay.info.set('distance', lib.math.round2(this.distance))
 
-        if (this.boiler.exploded && this.engine.speed === 0 && !this.poweredOff) {
+        if (this.boiler.exploded && this.engine.speed < 15 && !this.poweredOff) {
             this.timer += dt
             if (this.timer >= env.tune.train.waitToGameOver) {
                 this.poweredOff = true
