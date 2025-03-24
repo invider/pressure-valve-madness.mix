@@ -6,12 +6,6 @@ function hud() {
         vh:    env.style.dimension.controlPanel.vh,
     })
 
-    controlPanel.spawn( dna.hud.gadget.BoilerThermometer, {
-        name: 'boilerThermometer',
-        y:    2,
-        h:    54,
-    })
-
     controlPanel.spawn( dna.hud.gadget.RefuelLever, {
         name: 'refuel',
         x: 60,
@@ -26,11 +20,25 @@ function hud() {
         h: 40,
     })
 
+
+    controlPanel.spawn( dna.hud.gadget.BoilerThermometer, {
+        x:    220,
+        y:    2,
+        h:    54,
+    })
+
     controlPanel.spawn( dna.hud.gadget.PressureValve, {
         x: 360,
         y: 10,
         w: 45,
         h: 40,
+    })
+
+
+    controlPanel.spawn( dna.hud.gadget.BreakThermometer, {
+        x:    520,
+        y:    2,
+        h:    54,
     })
 
     controlPanel.spawn( dna.hud.gadget.BreakLever, {
@@ -39,5 +47,6 @@ function hud() {
         w: 80,
         h: 40,
     })
+
 }
 hud.Z = 12
