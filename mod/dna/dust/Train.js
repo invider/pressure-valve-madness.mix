@@ -7,7 +7,7 @@ class Train extends sys.LabFrame {
             x:    0,
             y:    0,
             w:    120,
-            h:    25,
+            h:    70,
             distance: 0,
             soundPerDistance: 15
         }, st) )
@@ -15,7 +15,24 @@ class Train extends sys.LabFrame {
     }
 
     init(){
-        
+        // монтуємо колесо на механічного вола
+        this.spawn( dna.dust.Wheel, {
+            x:  -45,
+            y:  27,
+        })
+        this.spawn( dna.dust.Wheel, {
+            x:  -25,
+            y:  27,
+        })
+
+        this.spawn( dna.dust.BigWheel, {
+            x:  4,
+            y:  23,
+        })
+        this.spawn( dna.dust.BigWheel, {
+            x: 32,
+            y: 23,
+        })
     }
 
     draw() {
@@ -23,26 +40,27 @@ class Train extends sys.LabFrame {
         save()
         translate(x, y)
 
-        fill( hsl(.1, .2, .3) )
-        rect( -.4 * w, -h, .3 * w, h)
-
-        fill( hsl(.1, .2, .2) )
-        rect( .2 * w, -1.5*h, .1 * w, h)
-
+        /*
+        // hint the size
         fill( hsl(.1, .2, .4) )
         rect( -.5 * w, -.5 * h, w, h)
 
-        image(res.train.locoBody, -60, -30, 120, 60)
+        lineWidth(1)
+        stroke('#8080FF')
+        rect( -.5 * w, -.5 * h, w, h)
+        */
 
-        restore()
+        image(res.train.locoBody, -60, -30 + this.deltaY, 120, 60)
 
         super.draw()
+        restore()
+
     }
 
     evo(dt) {
         super.evo(dt)
         // this.y = sin(12*env.time) * 5
-        this.y = sin(0.2 * this.distance) * 5
+        this.deltaY = sin(0.2 * this.distance) * 2
         this.distance += this.engine.speed * dt
         this._soundDistance += this.engine.speed * dt
 

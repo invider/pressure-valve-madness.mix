@@ -10,4 +10,8 @@ const tune = {
     gameover: {
         hold: 15,
     },
+
+    train: {
+        wheelTurnRate: 0.05,
+    },
 }
