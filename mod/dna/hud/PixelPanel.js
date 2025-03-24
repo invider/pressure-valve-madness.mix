@@ -30,8 +30,12 @@ class PixelPanel extends dna.hud.Container {
     drawBackground() {
         const { vw, vh } = this
 
-        fill('#ffdb8f')
-        rect(0, 0, vw, vh)
+        if (this.img) {
+            image(this.img, 0, 0, vw, vh)
+        } else {
+            fill('#ffdb8f')
+            rect(0, 0, vw, vh)
+        }
     }
 
     lx(gx) {

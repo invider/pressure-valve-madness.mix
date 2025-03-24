@@ -11,6 +11,7 @@ function hud() {
         vw,
         vh,
         pad,
+        //img: res.ui.bottomBar,
     })
 
     controlPanel.spawn( dna.hud.gadget.RefuelLever, {
