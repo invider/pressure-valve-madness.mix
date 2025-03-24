@@ -7,7 +7,9 @@ function hud() {
     })
 
     controlPanel.spawn( dna.hud.gadget.BoilerThermometer, {
-        name: 'thermo1',
+        name: 'boilerThermometer',
+        y:    2,
+        h:    54,
     })
 
     controlPanel.spawn( dna.hud.gadget.RefuelLever, {
@@ -22,12 +24,6 @@ function hud() {
         y: 10,
         w: 45,
         h: 40,
-    })
-
-    controlPanel.spawn( dna.hud.gadget.BoilerThermometer, {
-        name: 'thermo2',
-        x:    340,
-        background: '#f9a65e',
     })
 
     controlPanel.spawn( dna.hud.gadget.PressureValve, {
