@@ -13,6 +13,9 @@ function startNew() {
     train.spawn( dna.dust.Engine)
     train.spawn( dna.dust.Breaks)
     train.spawn( dna.dust.FuelTank)
+
+    pin.train = train
+    pin.boiler = train.boiler
 }
 
 function over() {

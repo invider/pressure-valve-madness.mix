@@ -27,6 +27,12 @@ function hud() {
         h:    54,
     })
 
+    controlPanel.spawn( dna.hud.gadget.WaterLevelMeter, {
+        x:    240,
+        y:    2,
+        h:    54,
+    })
+
     controlPanel.spawn( dna.hud.gadget.PressureValve, {
         x: 360,
         y: 10,
