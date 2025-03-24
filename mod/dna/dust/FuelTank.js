@@ -61,6 +61,7 @@ class FuelTank {
             return
         }
         this.selected = fuelArr[idx + 1];
+        return this.selected
     }
 
     evo(dt) {

@@ -11,8 +11,6 @@ class RefuelLever extends DustyButton {
     }
 
     onClick() {
-        log('refueling...')
-
         const tank = lab.port.train.fuelTank;
         lab.port.train.burner.add(tank.selected, tank.takeFuel(5));
     }

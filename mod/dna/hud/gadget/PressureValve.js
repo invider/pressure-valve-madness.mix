@@ -13,7 +13,6 @@ class PressureValve extends DustyButton {
 
     onMouseDown() {
         super.onMouseDown()
-        log('releasing pressure...')
         lab.port.train.boiler.openLetOffValve();
     }
 
