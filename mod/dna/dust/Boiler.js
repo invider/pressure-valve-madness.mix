@@ -15,6 +15,8 @@ class Boiler {
             boilingPoint: 115.4,
             efficiency: 0.9,
             waterBoilingCoef: 1,
+            // the factor, affects on the boiling temperature, depending on pressure, bigger means bigger affection
+            pressureBoilingFactor: 2,
             pressureCoef: 1,
             maxPressure: 10,
             letOffPerSecond: 1,
@@ -33,7 +35,9 @@ class Boiler {
 
     boilWater(dt) {
         if (this.temp > this.boilingPoint) {
-            const overheat = this.temp - this.boilingPoint;
+
+            const boilingPoint = this.boilingPoint + this.pressure * this.pressureBoilingFactor;
+            const overheat = (this.temp - boilingPoint);
             const amount = overheat * this.waterBoilingCoef * dt;
             this.waterAmount -= amount;
             this.pressure += this.pressureCoef * amount;
