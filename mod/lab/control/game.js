@@ -10,6 +10,13 @@ function startNew() {
     pin.train = train
     pin.boiler = train.boiler
 
+    let prev = train
+    for (let i = 0; i < 5; i++) {
+        const cart = lab.port.spawn( dna.dust.Cart )
+        cart.bindTo(prev)
+        prev = cart
+    }
+
     // debug
     // show coordinate grid
     // lab.port.spawn( dna.dust.debug.CoordGrid )

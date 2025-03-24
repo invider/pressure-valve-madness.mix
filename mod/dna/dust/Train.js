@@ -6,12 +6,15 @@ class Train extends sys.LabFrame {
             name: 'train',
             x:    0,
             y:    -35,
-            w:    120,
+            w:    122,
             h:    70,
             distance: 0,
             soundPerDistance: 15
         }, st) )
         this._soundDistance = 0
+
+        this.locomotive = this
+        this.index = 1
     }
 
     init(){
@@ -42,6 +45,11 @@ class Train extends sys.LabFrame {
         this.spawn( dna.dust.pod.FuelTank)
     }
 
+    onBind(cart) {
+        if (this.prev) throw new Exception('Already followed!')
+        this.prev = cart
+    }
+
     draw() {
         const { x, y, w, h } = this
         save()
@@ -57,7 +65,7 @@ class Train extends sys.LabFrame {
         rect( -.5 * w, -.5 * h, w, h)
         */
 
-        image(res.train.locoBody, -60, -30 + this.deltaY, 120, 60)
+        image(res.train.locoBody, -61, -30 + this.deltaY, 122, 60)
 
         super.draw()
         restore()

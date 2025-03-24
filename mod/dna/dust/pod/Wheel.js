@@ -11,13 +11,12 @@ class Wheel {
             h:     17,
             a:     0,
             img:   res.train.wheel,
-            //img:   res.train.locoBigWheel,
             wheelTurnRate: 0.1,
         }, st)
     }
 
     evo(dt) {
-        const speed = this.__.engine.speed
+        const speed = this.__.locomotive.engine.speed
         this.a += speed * this.wheelTurnRate * dt
     }
 

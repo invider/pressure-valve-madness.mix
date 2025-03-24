@@ -18,6 +18,8 @@ class DesertCamera extends dna.SlideCamera {
             this.scale -= this.zoomSpeed * dt
             if (this.scale < targetScale) this.scale = targetScale
         }
+
+        this.x = -lab.port.train.w
     }
 
     evo(dt) {
