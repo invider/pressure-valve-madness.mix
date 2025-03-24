@@ -16,7 +16,7 @@ class Boiler {
             efficiency: 0.9,
             waterBoilingCoef: 1,
             // the factor, affects on the boiling temperature, depending on pressure, bigger means bigger affection
-            pressureBoilingFactor: 2,
+            pressureBoilingFactor: 8,
             pressureCoef: 1,
             maxPressure: 10,
             letOffPerSecond: 1,
