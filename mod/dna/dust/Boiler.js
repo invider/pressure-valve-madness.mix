@@ -12,7 +12,7 @@ class Boiler {
             maxWaterAmount: 100,
             energyPerSecond: 100,
             minTemp: 10,
-            boilingPoint: 115.4,
+            boilingPoint: 101.3,
             efficiency: 0.9,
             waterBoilingCoef: 1,
             // the factor, affects on the boiling temperature, depending on pressure, bigger means bigger affection
