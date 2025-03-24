@@ -58,7 +58,7 @@ class FuelTank {
         const idx = fuelArr.indexOf(this.selected);
         if (idx == -1 || idx == fuelArr.length - 1){
             this.selected = fuelArr[0];
-            return
+            return this.selected
         }
         this.selected = fuelArr[idx + 1];
         return this.selected

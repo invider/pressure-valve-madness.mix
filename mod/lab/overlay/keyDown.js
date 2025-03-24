@@ -3,6 +3,7 @@ function keyDown(e) {
        case 'Escape':
           if (!env.transition) {
               lab.control.state.transitTo('menu')
+              lib.sfx('select')
           }
           break
     }

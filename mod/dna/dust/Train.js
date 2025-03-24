@@ -126,4 +126,8 @@ class Train extends sys.LabFrame {
         }
     }
 
+    onArrival() {
+        trap('game/shop')
+    }
+
 }

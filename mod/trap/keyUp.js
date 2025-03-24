@@ -5,14 +5,4 @@ function keyUp(e) {
         if (isFun(state.keyUp)) halt = state.keyUp(e)
         if (state.trap && isFun(state.trap.keyUp)) state.trap.keyUp(e)
     }
-
-    if (halt) return
-    if (e.ctrlKey || e.altKey || e.metaKey) return
-    switch(e.code) {
-        case 'Escape':
-            if (env.state === 'space' && !env.transition) {
-                trap('state/menu')
-            }
-            break
-    }
 }

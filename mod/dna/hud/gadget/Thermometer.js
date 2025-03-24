@@ -29,7 +29,7 @@ class Thermometer extends dna.hud.Container {
 
     relMeasure() {
         const range = this.maxTemp - this.minTemp
-        return this.takeMeasure() / range
+        return clamp((this.takeMeasure() - this.minTemp) / range, 0, 1)
     }
 
     // render the boiler pixel art

@@ -17,6 +17,9 @@ class Horizon {
         rect(vP.x, vP.y, vP.w, hY)
 
         fill('#b8633a')
+        //fill('#613d19')
+        //fill('#d4935b')
+        //fill('#69411e')
         rect(vP.x, vP.y + hY, vP.w, vP.h - hY)
     }
 }

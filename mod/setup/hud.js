@@ -1,3 +1,40 @@
+function compass() {
+
+    const topPanel = lab.hud.spawn( dna.hud.PixelPanel, {
+        name: 'topPanel',
+        clip: true,
+        pad:  5,
+        vw:   640,
+        vh:   20,
+
+        adjust: function() {
+            const scale = this.scale = ctx.width / (this.vw + 2 * this.vgap)
+            this.w = this.vw * scale
+            this.h = this.vh * scale
+            this.gap = this.vgap * scale
+
+            this.x = .5 * ctx.width - .5 * this.w
+            this.y = 0
+        }
+    })
+
+    const compass = topPanel.spawn( dna.hud.gadget.Compass, {
+        x: 80,
+        y: 5,
+        w: 480,
+    })
+
+    const distance = topPanel.spawn( dna.hud.gadget.Label, {
+        x: 5,
+        y: 2,
+        w: 70,
+
+        evo: function(dt) {
+            this.text = 'DIST: ' + round(lab.port.train.distance/10) + 'ft'
+        }
+    })
+}
+
 function controlPanel() {
 
     const pad = env.style.dimension.controlPanel.pad,
@@ -150,6 +187,7 @@ function shopPanel() {
 }
 
 function hud() {
+    compass()
     controlPanel()
     shopPanel()
 }

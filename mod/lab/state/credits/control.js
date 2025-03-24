@@ -27,6 +27,7 @@ function next() {
 
     this.startedAt = 0
     lab.control.state.transitTo('menu')
+    lib.sfx('select')
 }
 
 function evo(dt) {

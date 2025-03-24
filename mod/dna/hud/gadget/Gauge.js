@@ -30,7 +30,7 @@ class Gauge extends dna.hud.Container {
 
     relMeasure() {
         const range = this.max - this.min
-        return this.takeMeasure() / range
+        return clamp((this.takeMeasure() - this.min) / range, 0, 1)
     }
 
     // render the boiler pixel art

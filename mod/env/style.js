@@ -51,6 +51,10 @@ const style = {
             family: 'JackOfGears',
             size:    16,
         },
+        top: {
+            family: 'JackOfGears',
+            size:    12,
+        },
         title: {
             family: 'FabulousSteampunk',
             size:   80,

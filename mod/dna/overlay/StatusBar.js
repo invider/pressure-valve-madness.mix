@@ -14,6 +14,8 @@ class StatusBar {
     }
 
     draw() {
+        if (!env.debug) return
+
         const message = env.status || this.message
         if (this.hideWhenEmpty && !message) return
 
