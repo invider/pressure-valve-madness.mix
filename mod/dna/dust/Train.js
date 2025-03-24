@@ -16,31 +16,30 @@ class Train extends sys.LabFrame {
 
     init(){
         // монтуємо колесо на механічного вола
-        this.spawn( dna.dust.Wheel, {
+        this.spawn( dna.dust.pod.Wheel, {
             x:  -45,
             y:  27,
         })
-        this.spawn( dna.dust.Wheel, {
+        this.spawn( dna.dust.pod.Wheel, {
             x:  -25,
             y:  27,
         })
 
-        this.spawn( dna.dust.BigWheel, {
+        this.spawn( dna.dust.pod.BigWheel, {
             x:  4,
             y:  23,
         })
-        this.spawn( dna.dust.BigWheel, {
+        this.spawn( dna.dust.pod.BigWheel, {
             x: 32,
             y: 23,
         })
 
-        this.spawn( dna.dust.Boiler)
-        this.spawn( dna.dust.Burner)
-        this.spawn( dna.dust.WaterTank)
-        this.spawn( dna.dust.Engine)
-        this.spawn( dna.dust.Breaks)
-        this.spawn( dna.dust.FuelTank)
-
+        this.spawn( dna.dust.pod.Boiler)
+        this.spawn( dna.dust.pod.Burner)
+        this.spawn( dna.dust.pod.WaterTank)
+        this.spawn( dna.dust.pod.Engine)
+        this.spawn( dna.dust.pod.Breaks)
+        this.spawn( dna.dust.pod.FuelTank)
     }
 
     draw() {

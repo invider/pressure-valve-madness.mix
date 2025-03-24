@@ -1,6 +1,6 @@
 let id = 0
 
-const Wheel = require('dna/dust/Wheel')
+const Wheel = require('dna/dust/pod/Wheel')
 
 class BigWheel extends Wheel {
 

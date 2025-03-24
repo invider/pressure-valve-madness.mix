@@ -12,7 +12,7 @@ function startNew() {
 
     // debug
     // show coordinate grid
-    // lab.port.spawn( dna.dust.pod.CoordGrid )
+    // lab.port.spawn( dna.dust.debug.CoordGrid )
 }
 
 function over() {
