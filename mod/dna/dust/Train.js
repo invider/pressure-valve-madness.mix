@@ -69,7 +69,35 @@ class Train extends sys.LabFrame {
 
         super.draw()
         restore()
+    }
 
+    puff(N, water) {
+        const train  = this,
+              rdx = water? .28 : .4,
+              rdy = water? .45 : .5,
+              spreadX = 10,
+              spreadY = 10,
+              baseS   = 4,
+              spreadS = 12,
+              bx      = this.x + rdx * this.w,
+              by      = this.y - rdy * this.h
+
+        let delay = 0
+        for (let i = 0; i < N; i++) {
+            defer(() => {
+                const W = baseS + spreadS * rnd()
+                lab.port.fx.spawn( dna.fx.Puff, {
+                    train: train,
+                    water: water,
+                    x: bx + spreadX*rnd() - .5*spreadX,
+                    y: by + spreadY*rnd() - .5*spreadY,
+                    w: W,
+                    h: W,
+                })
+            }, delay)
+            delay += .05
+        }
+        if (!water) lib.sfx('steam-cycle')
     }
 
     evo(dt) {
@@ -80,7 +108,8 @@ class Train extends sys.LabFrame {
         this._soundDistance += this.engine.speed * dt
 
         if (this._soundDistance > this.soundPerDistance) {
-            lib.sfx('steam-cycle')
+            this.puff(2 + RND(8), false)
+            //this.puff(true)
             this._soundDistance -= this.soundPerDistance;
         }
         lab.overlay.info.set('distance', lib.math.round2(this.distance))

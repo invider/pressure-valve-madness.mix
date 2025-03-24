@@ -22,6 +22,10 @@ class Boiler {
             letOffPerSecond: 1,
             valveOpened: false,
             exploded: false,
+
+            PUFF_THRESHOLD: .5,
+            _lastSteam: 0,
+            _lastHorn:  0,
         }, st) 
     }
 
@@ -56,6 +60,10 @@ class Boiler {
 
     openLetOffValve(){
         this.valveOpened = true;
+        if (this.pressure > this.PUFF_THRESHOLD && (env.time - this._lastHorn > 5)) {
+            this._lastHorn = env.time
+            lib.sfx('horn')
+        }
     }
 
     closeLetOffValve(){
@@ -108,7 +116,14 @@ class Boiler {
         }
 
         if (this.valveOpened){
-            this.pressure -= this.letOffPerSecond * dt;
+            if (this.pressure > this.PUFF_THRESHOLD) {
+                this.__.puff(1, true)
+                if (env.time - this._lastSteam > 1) {
+                    this._lastSteam = env.time
+                    lib.sfx('steam')
+                }
+            }
+            this.pressure = max(this.pressure - this.letOffPerSecond * dt, 0)
             // TODO: add sound of the running out steam
         }
 

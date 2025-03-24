@@ -20,6 +20,16 @@ module.exports = {
         res: '752753__sprinklecipher__toy-electronic-typewriter-return-lever',
         vol: .8,
     },
+
+    'steam': {
+        res: '340254__kingof_thelab__steamloopstart',
+        vol: 1,
+    },
+    'horn': {
+        res: '170847__eliasheuninck__steam-train-horn_03',
+        vol: .8,
+    },
+
     'explosion': {
         res: 'explosion',
         vol: 1,

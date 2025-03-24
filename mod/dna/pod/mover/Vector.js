@@ -3,7 +3,7 @@ const UnitVector = require('dna/pod/mover/UnitVector')
 const df = {
     name:   'vector',
     dir:    0,
-    speed:  100,
+    speed:  0,
     debug:  false,
 }
 

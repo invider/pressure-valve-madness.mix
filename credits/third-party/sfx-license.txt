@@ -3,4 +3,5 @@
 * lever.wav by Krokulator -- https://freesound.org/s/696746/ -- License: Creative Commons 0
 * Clank1.wav by BMacZero -- https://freesound.org/s/94127/ -- License: Creative Commons 0
 * Marlin 1894 Lever Close (2).ogg by smill.and.welson -- https://freesound.org/s/698487/ -- License: Attribution 4.0
-
+* SteamLoopStart.wav by kingof_thelab -- https://freesound.org/s/340254/ -- License: Attribution 3.0
+* steam train horn 03 by eliasheuninck -- https://freesound.org/s/170847/ -- License: Attribution 4.0
