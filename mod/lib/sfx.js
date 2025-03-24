@@ -25,6 +25,6 @@ module.exports = function(name, vol, pan) {
         lib.sfx('missing')
         return
     }
-    //log(`plaing [${name}]`)
+    log(`plaing [${name}]`)
     sfx(clip, vol, pan)
 }

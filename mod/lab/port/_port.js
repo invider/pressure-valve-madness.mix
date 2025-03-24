@@ -7,5 +7,6 @@ const _port = {
     init: function() {
         this.touch('fx')
         this.fx.Z = 99001
+        this.fx.transient = true
     },
 }

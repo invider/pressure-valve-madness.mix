@@ -25,7 +25,7 @@ function startNew() {
 function over() {
     env.gameStarted = false
     lab.port.fx.killAll()
-    lab.port.killAll()
+    lab.port.apply(e => kill(e), e => !e.transient)
     pin.train  = null
     pin.boiler = null
 }

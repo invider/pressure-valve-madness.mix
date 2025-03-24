@@ -1,5 +1,6 @@
 const horizon = {
-    Z:     1,
-    name: 'horizon',
-    DNA:  'dust/Horizon',
+    Z:          1,
+    transient:  true,
+    name:      'horizon',
+    DNA:       'dust/Horizon',
 }
