@@ -16,7 +16,7 @@ class Manometer extends Gauge {
 
     takeMeasure() {
         if (env.gameStarted && lab.port.train && !lab.port.train.dead && lab.port.train.boiler) {
-            return clamp(lab.port.train.boiler.pressure, this.min, this.max)
+            return clamp(lab.port.train.boiler.pressure, this.min, lab.port.train.boiler.maxPressure)
         }
         return this.min
     }

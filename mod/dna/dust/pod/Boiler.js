@@ -18,7 +18,8 @@ class Boiler {
             // the factor, affects on the boiling temperature, depending on pressure, bigger means bigger affection
             pressureBoilingFactor: 8,
             pressureCoef: 1,
-            maxPressure: 10,
+            criticalPressure: 10,
+            maxPressure: 12,
             letOffPerSecond: 1,
             valveOpened: false,
             exploded: false,
@@ -26,6 +27,7 @@ class Boiler {
             PUFF_THRESHOLD: .5,
             _lastSteam: 0,
             _lastHorn:  0,
+            _lastBlowCheck: 0
         }, st) 
     }
 
@@ -111,6 +113,13 @@ class Boiler {
         }
 
         this.boilWater(dt);
+        if (this.pressure > this.criticalPressure) {
+            const criticalSection = this.maxPressure - this.criticalPressure;
+            const blowPossibilityGate = (this.pressure - this.criticalPressure) / criticalSection;
+            if ( rnd() < blowPossibilityGate * dt) {
+                this.blowUp();
+            }
+        }
         if (this.pressure > this.maxPressure && !this.exploded) {
             this.blowUp()
         }
