@@ -98,7 +98,12 @@ const style = {
             vw:    640,
             vh:    70,
             pad:   10,
-        }
+        },
+        shopPanel: {
+            vw:    340,
+            vh:    70,
+            pad:   10,
+        },
     },
 }
 

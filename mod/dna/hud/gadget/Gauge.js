@@ -67,16 +67,13 @@ class Gauge extends dna.hud.Container {
         fill(this.background)
         circle(0, 0, R)
 
-        lineWidth(1)
+        lineWidth(2)
         stroke(this.mark)
         circle(0, 0, R4)
-
-        lineWidth(2)
         stroke(this.warning)
         arc(0, 0, R4, a15, a17)
         stroke(this.danger)
         arc(0, 0, R4, a17, a2)
-
 
         lineWidth(1)
         stroke(this.mark)

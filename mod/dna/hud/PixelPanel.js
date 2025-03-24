@@ -15,18 +15,6 @@ class PixelPanel extends dna.hud.Container {
         }, st) )
     }
 
-    adjust() {
-        // TODO scale to the screen width preserving the aspect
-        // ... adjust size
-        const scale = this.scale = ctx.width / (this.vw + 2 * this.vgap)
-        this.w = this.vw * scale
-        this.h = this.vh * scale
-        this.gap = this.vgap * scale
-
-        this.x = .5 * ctx.width - .5 * this.w
-        this.y = ctx.height - this.h - this.gap
-    }
-
     drawBackground() {
         const { vw, vh } = this
 
