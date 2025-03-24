@@ -1,4 +1,22 @@
 === Design and Programming ===
 
-Igor Khotin & Co.
+Igor Khotin
+Anatolii Yakushko
+Mark Khotin
+
+
+=== Sound Effects ===
+
+Toy Electronic Typewriter Return Lever by sprinkleCipher
+Lever by randomguywhoneverasked
+Lever by Krokulator
+Clank1 by BMacZero
+Marlin 1894 Lever Close by smill.and.welson
+SteamLoopStart.wav by kingof_thelab
+Steam train horn 03 by eliasheuninck
+
+=== Fonts ===
+
+Fabulous Steampunk by Marta van Eck Designs
+Jack of Gears Regular Designed by Michael W. Moss
 

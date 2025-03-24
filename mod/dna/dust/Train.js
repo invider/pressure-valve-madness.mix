@@ -8,6 +8,7 @@ class Train extends sys.LabFrame {
             y:    -35,
             w:    122,
             h:    70,
+            timer:    0,
             distance: 0,
             soundPerDistance: 15
         }, st) )
@@ -113,6 +114,16 @@ class Train extends sys.LabFrame {
             this._soundDistance -= this.soundPerDistance;
         }
         lab.overlay.info.set('distance', lib.math.round2(this.distance))
+
+        if (this.boiler.exploded && this.engine.speed === 0 && !this.poweredOff) {
+            this.timer += dt
+            if (this.timer >= env.tune.train.waitToGameOver) {
+                this.poweredOff = true
+                this.timer = -1
+                trap('game/over')
+            }
+
+        }
     }
 
 }

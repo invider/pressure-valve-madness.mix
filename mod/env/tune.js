@@ -5,12 +5,13 @@ const tune = {
         hold: 5,
     },
     credits: {
-        hold: 15,
+        hold: 35,
     },
     gameover: {
         hold: 15,
     },
 
     train: {
+        waitToGameOver: 7,
     },
 }
