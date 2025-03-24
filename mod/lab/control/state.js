@@ -63,6 +63,11 @@ class GroupState {
 
         if (!isString(this.name)) throw new Error('Group state MUST have a name')
         if (!isArray(this.states) || this.states.length === 0) throw new Error('Group state MUST have a states list')
+
+        // validate states
+        this.states.forEach((e, i) => {
+            if (!e) throw new Error(`Can't group states: missing state #${i+1}`)
+        })
     }
 
     // activate all included states

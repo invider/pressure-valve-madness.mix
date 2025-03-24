@@ -9,12 +9,14 @@ class Horizon {
     }
 
     draw() {
-        const hY = this.rY * ctx.height 
+        const vP = this.__.viewport()
+
+        const hY = this.rY * vP.h
 
         fill('#9090ce')
-        rect(0, 0, ctx.width, hY)
+        rect(vP.x, vP.y, vP.w, hY)
 
         fill('#b8633a')
-        rect(0, hY, ctx.width, ctx.height - hY)
+        rect(vP.x, vP.y + hY, vP.w, vP.h - hY)
     }
 }
