@@ -9,9 +9,9 @@ class PixelPanel extends dna.hud.Container {
             w:     0,
             h:     0,
             gap:   0,
-            vw:    640,
-            vh:    60,
-            vgap:  10,
+            vw:    100,
+            vh:    20,
+            vgap:  0,
         }, st) )
     }
 

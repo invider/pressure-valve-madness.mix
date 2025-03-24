@@ -38,7 +38,14 @@ class Debris extends dna.Entity {
             new dna.pod.mover.GravityVector({
                 dir:   lib.math.rnda() / 2 - HALF_PI,
                 speed: st.baseSpeed + st.varSpeed * rnd(),
-            })
+            }),
+        )
+        // move back
+        this.attach(
+            new dna.pod.mover.Vector({
+                dir: PI,
+                speed: 25,
+            }),
         )
 
         this.attach(

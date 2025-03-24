@@ -6,8 +6,8 @@ class Train extends sys.LabFrame {
             name: 'train',
             x:    0,
             y:    0,
-            w:    200,
-            h:    50,
+            w:    120,
+            h:    25,
             distance: 0,
             soundPerDistance: 15
         }, st) )
@@ -31,6 +31,8 @@ class Train extends sys.LabFrame {
 
         fill( hsl(.1, .2, .4) )
         rect( -.5 * w, -.5 * h, w, h)
+
+        image(res.train.locoBody, -60, -30, 120, 60)
 
         restore()
 

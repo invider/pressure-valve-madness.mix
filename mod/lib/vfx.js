@@ -43,7 +43,7 @@ function explosionAt(x, y, scale) {
         lab.port.fx.spawn(dna.fx.Debris, {
             x: x,
             y: y,
-            scale: 2,
+            scale: 1,
             baseSpeed: 40,
             varSpeed: 40,
             baseLife: 3,
@@ -54,7 +54,7 @@ function explosionAt(x, y, scale) {
     lab.port.fx.spawn( dna.fx.Explosion, {
         x: x,
         y: y,
-        scale: 2,
+        scale: scale,
         force: 35,
     })
     lib.sfx('explosion')

@@ -96,7 +96,8 @@ const style = {
         },
         controlPanel: {
             vw:    640,
-            vh:    60,
+            vh:    70,
+            pad:   10,
         }
     },
 }

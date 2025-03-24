@@ -70,17 +70,17 @@ class Boiler {
 
         let delay = 0
         const boiler = this,
-              spreadX = 100,
-              spreadY = 50,
-              sx =  50,
-              sy = -25
-        defer(() => lib.vfx.explosionAt(boiler.x + sx, boiler.y + sy, 3 * rnd()), delay)
+              spreadX = 60,
+              spreadY = 25,
+              sx =  25,
+              sy = -15
+        defer(() => lib.vfx.explosionAt(boiler.x + sx, boiler.y + sy, 2), delay)
         for (let i = 0; i < 3; i++) {
             delay += .4
             defer(() => lib.vfx. explosionAt(
                     boiler.x + sx + spreadX*rnd() - .5*spreadX,
                     boiler.y + sy + spreadY*rnd() - .5*spreadY,
-                    .5 + 3 * rnd()),
+                    .5 + 1 * rnd()),
                 delay
             )
         }
