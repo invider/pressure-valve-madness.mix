@@ -20,17 +20,32 @@ function hud() {
         h: 40,
     })
 
+    controlPanel.spawn( dna.hud.gadget.Speedometer, {
+        x:    200,
+        y:    5,
+        w:    50,
+        h:    50,
+        R:    25,
+    })
+
 
     controlPanel.spawn( dna.hud.gadget.BoilerThermometer, {
-        x:    220,
+        x:    260,
+        y:    2,
+        h:    54,
+    })
+    controlPanel.spawn( dna.hud.gadget.WaterLevelMeter, {
+        x:    280,
         y:    2,
         h:    54,
     })
 
-    controlPanel.spawn( dna.hud.gadget.WaterLevelMeter, {
-        x:    240,
-        y:    2,
-        h:    54,
+    controlPanel.spawn( dna.hud.gadget.Manometer, {
+        x:    300,
+        y:    5,
+        w:    50,
+        h:    50,
+        R:    25,
     })
 
     controlPanel.spawn( dna.hud.gadget.PressureValve, {
