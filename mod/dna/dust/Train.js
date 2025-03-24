@@ -5,7 +5,7 @@ class Train extends sys.LabFrame {
             Z:    101,
             name: 'train',
             x:    0,
-            y:    0,
+            y:    -35,
             w:    120,
             h:    70,
             distance: 0,
@@ -33,6 +33,14 @@ class Train extends sys.LabFrame {
             x: 32,
             y: 23,
         })
+
+        this.spawn( dna.dust.Boiler)
+        this.spawn( dna.dust.Burner)
+        this.spawn( dna.dust.WaterTank)
+        this.spawn( dna.dust.Engine)
+        this.spawn( dna.dust.Breaks)
+        this.spawn( dna.dust.FuelTank)
+
     }
 
     draw() {

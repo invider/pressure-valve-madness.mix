@@ -9,6 +9,7 @@ class BigWheel extends Wheel {
             w:     25,
             h:     24,
             img:   res.train.locoBigWheel,
+            wheelTurnRate: 0.05,
         }, st) )
     }
 }

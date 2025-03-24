@@ -2,8 +2,8 @@ class Boiler {
     constructor(st) {
         augment(this, {
             name: 'boiler',
-            x:    0,
-            y:    0,
+            x:    15,
+            y:    4,
             w:    0,
             h:    0,
             temp:     0,
@@ -70,16 +70,17 @@ class Boiler {
 
         let delay = 0
         const boiler = this,
+              train  = this.__,
               spreadX = 80,
-              spreadY = 25,
-              sx =  25,
-              sy = -15
-        defer(() => lib.vfx.explosionAt(boiler.x + sx, boiler.y + sy, 1), delay)
+              spreadY = 20,
+              bx      = train.x + boiler.x + 0,
+              by      = train.y + boiler.y + 0 - 10
+        defer(() => lib.vfx.explosionAt(bx, by, 1), delay)
         for (let i = 0; i < 6; i++) {
             delay += .4
-            defer(() => lib.vfx. explosionAt(
-                    boiler.x + sx + spreadX*rnd() - .5*spreadX,
-                    boiler.y + sy + spreadY*rnd() - .5*spreadY,
+            defer(()=> lib.vfx.explosionAt(
+                    bx + spreadX*rnd() - .5*spreadX,
+                    by + spreadY*rnd() - .5*spreadY,
                     .5 + .5 * rnd()),
                 delay
             )

@@ -50,7 +50,7 @@ class Debris extends dna.Entity {
 
         this.attach(
             new dna.pod.cue.GroundDestruct({
-                groundY: 20,
+                groundY: 0,
             })
             /*
             new dna.pod.cue.SelfDestruct({

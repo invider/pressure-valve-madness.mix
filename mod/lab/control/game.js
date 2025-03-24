@@ -6,20 +6,19 @@ function startNew() {
     log('starting a new game...')
     env.gameStarted = true
 
-    const train = lab.port.spawn( dna.dust.Train)
-    train.spawn( dna.dust.Boiler)
-    train.spawn( dna.dust.Burner)
-    train.spawn( dna.dust.WaterTank)
-    train.spawn( dna.dust.Engine)
-    train.spawn( dna.dust.Breaks)
-    train.spawn( dna.dust.FuelTank)
-
+    const train = lab.port.spawn( dna.dust.Train )
     pin.train = train
     pin.boiler = train.boiler
+
+    // debug
+    // show coordinate grid
+    // lab.port.spawn( dna.dust.pod.CoordGrid )
 }
 
 function over() {
     env.gameStarted = false
     lab.port.fx.killAll()
     lab.port.killAll()
+    pin.train  = null
+    pin.boiler = null
 }

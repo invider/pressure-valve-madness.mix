@@ -12,6 +12,5 @@ const tune = {
     },
 
     train: {
-        wheelTurnRate: 0.05,
     },
 }

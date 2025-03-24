@@ -38,13 +38,13 @@ function hud() {
 
     controlPanel.spawn( dna.hud.gadget.BoilerThermometer, {
         x:    260,
-        y:    2,
-        h:    54,
+        y:    5,
+        h:    60,
     })
     controlPanel.spawn( dna.hud.gadget.WaterLevelMeter, {
         x:    280,
-        y:    2,
-        h:    54,
+        y:    5,
+        h:    6,
     })
 
     controlPanel.spawn( dna.hud.gadget.Manometer, {
@@ -65,8 +65,8 @@ function hud() {
 
     controlPanel.spawn( dna.hud.gadget.BreakThermometer, {
         x:    520,
-        y:    2,
-        h:    54,
+        y:    5,
+        h:    60,
     })
 
     controlPanel.spawn( dna.hud.gadget.BreakLever, {
